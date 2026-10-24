@@ -82,6 +82,7 @@ export const FUSOS_DO_ONBOARDING: { id: string; cidade: string }[] = [
   { id: "America/Cuiaba", cidade: "Cuiabá e Mato Grosso" },
   { id: "America/Rio_Branco", cidade: "Rio Branco e Acre" },
   { id: "America/Argentina/Buenos_Aires", cidade: "Buenos Aires" },
+  { id: "Africa/Luanda", cidade: "Luanda" }, // JTA: Angola no primeiro acesso (esp. 0001)
   { id: "Europe/Lisbon", cidade: "Lisboa" },
   { id: "Europe/Madrid", cidade: "Madri" },
   { id: "Europe/Rome", cidade: "Roma" },

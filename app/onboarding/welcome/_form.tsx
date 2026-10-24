@@ -16,6 +16,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FUSO_PADRAO, FUSOS_DO_ONBOARDING } from "@/lib/tempo/fusos";
+// JTA: começa no fuso do navegador quando está na lista (esp. 0001); lógica em lib/jta/fuso-do-navegador.ts
+import { useFusoDoNavegador } from "@/lib/jta/fuso-do-navegador";
 
 
 export function WelcomeForm({
@@ -29,6 +31,7 @@ export function WelcomeForm({
   const [displayName, setDisplayName] = useState(defaultOrgName);
   const [oQueFaz, setOQueFaz] = useState("");
   const [timezone, setTimezone] = useState(FUSO_PADRAO);
+  useFusoDoNavegador(FUSOS_DO_ONBOARDING.map((f) => f.id), FUSO_PADRAO, setTimezone); // JTA: esp. 0001
   const [accepted, setAccepted] = useState(false);
   const [pending, startTransition] = useTransition();
 
